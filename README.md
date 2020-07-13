@@ -1,5 +1,7 @@
 # CloneTwitter
 
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.loom.com/share/d3b490cf70e94d0e898125e769fd07e8)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
 
 ## Development server
