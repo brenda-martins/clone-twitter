@@ -1,0 +1,145 @@
+/**
+MENU BAR
+*/
+
+.menu-bar {
+    display: none;
+}
+
+@media (min-width: 500px) {
+    .menu-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        position: sticky;
+        top: 0;
+        left: 0;
+
+        padding: 9px 19px 20px;
+
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+.top-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 1280px) {
+    .top-side {
+        align-items: flex-start;
+    }
+}
+
+.top-side .menu-button > ul > li {
+    // display: flex;
+    // align-items: center;
+    flex-shrink: 0;
+
+    padding: 8px;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 25px;
+
+    span {
+        display: none;
+    }
+
+    @media (min-width: 1280px) {
+        > span {
+            display: inline;
+            margin-left: 10px;
+
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    &:hover {
+        background: var(--twitter-dark-hover);
+    }
+
+    &:hover,
+    &.active {
+        > span,
+        i {
+            color: var(--twitter);
+        }
+    }
+}
+
+.menu-button > button {
+    margin-top: 33px;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+
+    @media (min-width: 1280px) {
+        width: 100%;
+        height: unset;
+        font-size: 15px;
+    }
+}
+
+.top-side .menu-button > ul {
+    list-style: none;
+
+    > li i {
+        flex-shrink: 0;
+
+        width: 30px;
+        height: 30px;
+        color: var(--white);
+    }
+}
+
+.bottom-side {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-side .avatar {
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--gray);
+}
+
+.bottom-side .profile-data,
+.bottom-side > i {
+    display: none;
+}
+
+@media (min-width: 1280px) {
+    .bottom-side .profile-data {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        font-size: 14px;
+
+        > span {
+            color: var(--gray);
+        }
+    }
+    .bottom-side > i {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        color: var(--white);
+        margin-left: 30px;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--like);
+        }
+    }
+}

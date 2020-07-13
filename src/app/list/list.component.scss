@@ -1,0 +1,21 @@
+.list-items {
+    display: flex;
+    flex-direction: column;
+    background: var(--secondary);
+    border-radius: 14px;
+}
+
+.list-items > h1 {
+    padding-top: 13px;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.list-items .item {
+    padding: 10px 16px;
+    border-top: 1px solid var(--outline);
+
+    &:last-child {
+        padding-bottom: 17px;
+    }
+}

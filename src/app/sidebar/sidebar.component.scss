@@ -1,0 +1,135 @@
+.sidebar {
+    display: none;
+    @media (min-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        width: min(399px, 100%);
+    }
+}
+
+.search-wrapper {
+    padding: 10px 24px;
+    width: min(399px, 100%);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background: var(--primary);
+    max-height: 57px;
+}
+
+.search-wrapper > input {
+    width: 100%;
+    height: 39px;
+    font-size: 14px;
+    padding: 0 10px 0 52px;
+    border-radius: 19.5px;
+    background: var(--search);
+
+    outline: 0;
+
+    &:placeholder {
+        color: var(--gray);
+    }
+
+    &:focus {
+        border: 1px solid var(--twitter);
+
+        i {
+            color: var(--twitter);
+        }
+    }
+}
+
+.search-wrapper > i {
+    position: relative;
+    top: -33px;
+    left: 15px;
+    z-index: 1;
+    transition: 180ms ease-in-out;
+}
+
+.sidebar-body {
+    width: min(399px, 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 57px 24px 200px;
+
+    position: sticky;
+    top: 0;
+
+    margin-top: 3px;
+
+    > div + div {
+        margin-top: 15px;
+    }
+}
+
+.list-items {
+    display: flex;
+    flex-direction: column;
+    background: var(--secondary);
+    border-radius: 14px;
+}
+
+.list-items > h1 {
+    padding: 13px 16px 10px;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.list-items .item {
+    display: flex;
+    padding: 10px 16px;
+    border-top: 1px solid var(--outline);
+
+    align-items: center;
+    justify-content: space-between;
+
+    &:last-child {
+        padding-bottom: 17px;
+    }
+
+    > div {
+        display: flex;
+        align-items: center;
+        margin-right: 85px;
+    }
+}
+
+.list-items .item .avatar {
+    width: 49px;
+    height: 49px;
+    background: var(--gray);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.list-items .item .info {
+    display: flex;
+    flex-direction: column;
+
+    > strong {
+        font-size: 14px;
+    }
+
+    > span {
+        font-size: 14px;
+        color: var(--gray);
+    }
+}
+
+.list-items .item button {
+    padding: 6px 17px;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    border-top: 1px solid var(--outline);
+    padding: 10px 16px;
+    > span {
+        color: var(--gray);
+        margin-bottom: 3px;
+    }
+}
