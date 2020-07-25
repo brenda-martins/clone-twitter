@@ -7,6 +7,9 @@ import { MainComponent } from './main/main.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ListComponent } from './list/list.component';
+import { IndexComponent } from './index/index.component';
+import { RegisterComponent } from './index/register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,10 +17,14 @@ import { ListComponent } from './list/list.component';
     MainComponent,
     MenuBarComponent,
     SidebarComponent,
-    ListComponent
+    ListComponent,
+    IndexComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule, 
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],
