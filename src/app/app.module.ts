@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
-import { MenuBarComponent } from './menu-bar/menu-bar.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { ListComponent } from './list/list.component';
+import { MainComponent } from './profile/main/main.component';
+import { MenuBarComponent } from './profile/menu-bar/menu-bar.component';
+import { SidebarComponent } from './profile/sidebar/sidebar.component';
+import { ListComponent } from './profile/list/list.component';
 import { IndexComponent } from './index/index.component';
 import { RegisterComponent } from './index/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';

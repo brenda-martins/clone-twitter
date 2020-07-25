@@ -1,0 +1,131 @@
+<div class="container">
+    <div class="wrapper">
+        <app-menu-bar></app-menu-bar>
+
+        <main class="main-container">
+
+
+            <header>
+                <button>
+                    <i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i>
+                </button>
+                <div class="profile-info">
+                    <strong>Brenda Martins</strong>
+                    <span>744 Tweets</span>
+                </div>
+            </header>
+
+
+
+            <div class="profile-page">
+
+                <div class="banner">
+                    <div class="avatar"> </div>
+                </div>
+
+
+                <div class="profile-data">
+                    app-menu-bar<button class="button outlined">Editar perfil</button>
+
+                    <h1>Brenda Martins</h1>
+                    <h2>@brenda_martins</h2>
+
+                    <p>Developer</p>
+
+                    <ul>
+                        <li>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Minas Gerais, Brasil
+                        </li>
+
+                        <li>
+                            <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                            Nascido(a) em 12 de Novembro de 1996
+                        </li>
+                    </ul>
+
+                    <div class="followage">
+                        <span>
+                            <strong>144 </strong> seguindo
+                        </span>
+                        <span>
+                            <strong>144 </strong> seguidores
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="feed">
+                    <div class="tabs">
+                        <div class="tab">Tweets</div>
+                        <div class="tab">Tweets e retweets</div>
+                        <div class="tab">Mídias</div>
+                        <div class="tab">Likes</div>
+                    </div>
+                    <div class="tweets">
+                        <div class="tweet" *ngFor="let tweet of tweets">
+
+                            <div class="retweeted" *ngIf="tweet.retweeted">
+                                <i class="fa fa-retweet" aria-hidden="true"></i>
+                                você retweetou
+                            </div>
+
+                            <div class="tweet-body">
+                                <div class="tweet-avatar"></div>
+
+                                <div class="tweet-content">
+                                    <div class="tt-ct-header">
+                                        <strong>{{tweet.name}}</strong>
+                                        <span>{{tweet.user}}</span>
+                                        <div class="tt-ct-dot"></div>
+                                        <small>{{tweet.time}}</small>
+                                    </div>
+
+                                    <div class="tt-ct-description">
+                                        <p>{{tweet.description}}</p>
+                                    </div>
+
+                                    <div class="tt-ct-image-content" *ngIf="tweet.image"></div>
+
+                                    <div class="tt-ct-status">
+                                        <ul>
+                                            <li>
+                                                <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                                {{tweet.commenting}}
+                                            </li>
+
+                                            <li [ngClass]="{'retweet': retweet && id === tweet.id}"
+                                                (click)="retweetar(tweet.id)">
+                                                <i class="fa fa-retweet" aria-hidden="true"></i>
+                                                {{tweet.retweet}}
+                                            </li>
+
+                                            <li [ngClass]="{'like': like && id === tweet.id}" (click)="liker(tweet.id)">
+                                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                {{tweet.likes}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="bottom-menu">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="fa fa-bell" aria-hidden="true"></i>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </div>
+
+        </main>
+
+        <app-sidebar></app-sidebar>
+    </div>
+</div>
