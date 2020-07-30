@@ -1,6 +1,8 @@
 # CloneTwitter
 
 ![](https://github.com/brenda-martins/clone-twitter/blob/master/images/twitter.png)
+![](https://github.com/brenda-martins/clone-twitter/blob/master/images/login.png)
+![](https://github.com/brenda-martins/clone-twitter/blob/master/images/index.png)
 
 [![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.loom.com/share/d3b490cf70e94d0e898125e769fd07e8)
 

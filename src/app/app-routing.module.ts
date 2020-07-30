@@ -6,9 +6,13 @@ import { RegisterComponent } from './index/register/register.component';
 import { MainComponent } from './profile/main/main.component';
 
 const routes: Routes = [
-	{ path: '', component: IndexComponent },
+	{ path: 'index', component: IndexComponent},
+	
 	{ path: 'registrar', component: RegisterComponent },
-	{path: 'perfil', component: MainComponent }
+
+	{path: 'perfil', component: MainComponent },
+
+	{ path: '', pathMatch: 'full', redirectTo: 'index'}
 ];
 
 @NgModule({
